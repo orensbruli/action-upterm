@@ -105,7 +105,7 @@ export async function run() {
     await execShellCommand("tmux send-keys -t upterm-wrapper q C-m")
     // resize terminal for largest client by default
     await execShellCommand("tmux set -t upterm-wrapper window-size largest; tmux set -t upterm window-size largest")
-    console.debug("Created new session successfully")
+    console.debug("Created new session successfully sdasdsadsad")
 
     core.debug("Fetching connection strings")
     await sleep(1000)
