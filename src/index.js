@@ -113,7 +113,7 @@ export async function run() {
     console.debug("Entering main loop")
     while (true) {
       try {
-        core.info(await execShellCommand('bash -c "upterm session current --admin-socket ~/.upterm/*.sock"'));
+        core.info(await execShellCommand('bash -c "upterm session current"'));
       } catch (error) {
         core.info(error.message);
         break
