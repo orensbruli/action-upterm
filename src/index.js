@@ -109,12 +109,11 @@ export async function run() {
 
     core.debug("Fetching connection strings")
     await sleep(1000)
-
+    core.info(await execShellCommand('bash -c "find ~/.upterm/"'));
+    ore.info(await execShellCommand('bash -c "echo $HOME"'));
     console.debug("Entering main loop")
     while (true) {
       try {
-        core.info(await execShellCommand('bash -c "find ~/.upterm/"'));
-        core.info(await execShellCommand('bash -c "echo $HOME"'));
         core.info(await execShellCommand('bash -c "upterm session current"'));
       } catch (error) {
         core.info(error.message);
