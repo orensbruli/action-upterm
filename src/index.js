@@ -114,6 +114,7 @@ export async function run() {
     while (true) {
       try {
         core.info(await execShellCommand('bash -c "find ~/.upterm/"'));
+        core.info(await execShellCommand('bash -c "echo $HOME"'));
         core.info(await execShellCommand('bash -c "upterm session current"'));
       } catch (error) {
         core.info(error.message);
