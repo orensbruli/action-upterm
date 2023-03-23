@@ -113,6 +113,7 @@ export async function run() {
     console.debug("Entering main loop")
     while (true) {
       try {
+        core.info(await execShellCommand('bash -c "find ~/.upterm/"'));
         core.info(await execShellCommand('bash -c "upterm session current"'));
       } catch (error) {
         core.info(error.message);
